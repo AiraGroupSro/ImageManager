@@ -1,0 +1,39 @@
+{
+    "name":        "airagroupsro/image-manager",
+    "type":        "library",
+    "description": "Utility for image resizing, cropping and encrypting.",
+    "keywords":    [
+        "php",
+        "image",
+        "resize",
+        "crop",
+        "encrypt"
+    ],
+    "homepage":    "https://github.com/AiraGroupSro/ImageManager",
+    "license":     "MIT",
+
+    "authors": [
+        {
+            "name": "Werner Dweight",
+            "email": "wd@wernerdweight.com"
+        },
+        {
+            "name": "Michal Kumžák",
+            "email": "michal.kumzak@aira.cz"
+        }
+    ],
+
+    "require": {
+        "php":  ">=5.5.9"
+    },
+
+    "require-dev": {},
+
+    "suggest": {},
+
+    "autoload": {
+        "psr-4": {
+            "AiraGroupSro\\ImageManager\\": ""
+        }
+    }
+}
