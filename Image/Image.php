@@ -1,6 +1,6 @@
 <?php
 
-namespace WernerDweight\ImageManager\Image;
+namespace AiraGroupSro\ImageManager\Image;
 
 Class Image{
 	private $width;

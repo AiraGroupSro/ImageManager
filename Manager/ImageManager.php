@@ -1,8 +1,8 @@
 <?php
 
-namespace WernerDweight\ImageManager\Manager;
+namespace AiraGroupSro\ImageManager\Manager;
 
-use WernerDweight\ImageManager\Image\Image;
+use AiraGroupSro\ImageManager\Image\Image;
 
 Class ImageManager{
 	private $image;
