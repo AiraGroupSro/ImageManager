@@ -11,7 +11,7 @@ Installation
 ```js
 	{
 		"require": {
-			"airagroupsro/image-manager": "~1.0"
+			"wernerdweight/image-manager": "~1.0"
 		}
 	}
 ```

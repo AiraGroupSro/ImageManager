@@ -44,7 +44,7 @@ Class ImageManager{
 		$this->image->destroy();
 		$this->image = $tmp;
 		if($crop) $this->crop($width,$height);
-		
+
 		if($encrypt){
 			$this->encrypt();
 		}
@@ -58,8 +58,8 @@ Class ImageManager{
 		else $encrypt = false;
 
 		$crop = $this->adjustCrop($width,$height);
-		$centerX = ($this->image->getWidth()/2) - ($crop['width']/2);
-		$centerY = ($this->image->getHeight()/2) - ($crop['height']/2);
+		$centerX = round(($this->image->getWidth()/2) - ($crop['width']/2));
+		$centerY = round(($this->image->getHeight()/2) - ($crop['height']/2));
 		$tmp = new Image(null,$this->image->getExt(),$this->secret,$this->autorotate);
 		$tmp->create(array('width' => $width,'height' => $height));
 		imagecopyresampled($tmp->getData(),$this->image->getData(),0,0,$centerX,$centerY,$width,$height,$crop['width'],$crop['height']);
@@ -104,10 +104,10 @@ Class ImageManager{
 	}
 
 	private function getWidth($height){
-		return $height * ($this->image->getWidth() / $this->image->getHeight());
+		return round($height * ($this->image->getWidth() / $this->image->getHeight()));
 	}
 
 	private function getHeight($width){
-		return $width * ($this->image->getHeight() / $this->image->getWidth());
+		return round($width * ($this->image->getHeight() / $this->image->getWidth()));
 	}
 }
